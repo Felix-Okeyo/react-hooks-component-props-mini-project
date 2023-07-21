@@ -1,14 +1,14 @@
 import React from 'react';
-import ArticleList from './ArticleList';
 
-function Article ({ title, date, preview, minutes }) {
+
+function Article ({ title, date="January 1, 1970", preview }) {
   
   // If no date is passed as a prop, use the default value "January 1, 1970"
-  const formattedDate = date || "January 1, 1970";
+  
   return (
     <article>
       <h3>{title}</h3>
-      <small>{formattedDate}</small>
+      <small>{date}</small>
       <p>{preview}</p>
     </article>
   );
